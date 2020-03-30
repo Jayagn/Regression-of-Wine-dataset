@@ -72,7 +72,9 @@ par(oldpar)
 
 dim(cleanWhiteDat)
 skim(cleanWhiteDat)
-#By removing the outliers, the dataset size reduced to 4899 observations
+#By removing the outliers, the dataset size reduced to 4899 observations.
+
+# Aish..! After removing the outliers, the dataset size is reduced to '7970' observations..
 
 #We now use a scatterplot matrice to roughly determine if there is a linear correlation between our variables
 windows()
