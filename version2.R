@@ -142,3 +142,14 @@ wine.fit3 = lm(quality ~ ., -citric.acid - chlorides - density, data = cleanWhit
 summary(wine.fit3)
 #Calculating the MSE
 mean(wine.fit3$residuals^2)
+
+
+library(olsrr)
+ols = ols_step_all_possible(wine.fit3)
+ols <- ols
+print(max(ols$adjr))
+print(ols[which.max(ols$adjr),])
+View(ols)
+ols.best = ols_step_best_subset(wine.fit3)
+View(ols.best)
+plot(ols.best)
