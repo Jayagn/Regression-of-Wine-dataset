@@ -151,5 +151,6 @@ print(max(ols$adjr))
 print(ols[which.max(ols$adjr),])
 View(ols)
 ols.best = ols_step_best_subset(wine.fit3)
+#Got best subset with number of variables equal to 7
 View(ols.best)
 plot(ols.best)
