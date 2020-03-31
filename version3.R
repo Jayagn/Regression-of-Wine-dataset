@@ -140,16 +140,16 @@ print(ols[which.max(ols$adjr),])
 ols.best = ols_step_best_subset(wine.fit6)
 View(ols.best)
 durbinWatsonTest(wine.fit6)
-wine.fit2 = lm(quality ~ . - citric.acid - chlorides, data = cleanWhiteDat)
-summary(wine.fit2)
+#wine.fit2 = lm(quality ~ . - citric.acid - chlorides, data = cleanWhiteDat)
+#summary(wine.fit2)
 #Calculating the MSE
 mean(wine.fit2$residuals^2)
 vif(wine.fit2)
 #Multicollinearity test (VIF)
 #Based on vif density has value of 18.72 which is greater than 10. Hence we can remove density from the model
 
-wine.fit3 = lm(quality ~ . - citric.acid - chlorides - density , data = cleanWhiteDat)
-summary(wine.fit3)
+#wine.fit3 = lm(quality ~ . - citric.acid - chlorides - density , data = cleanWhiteDat)
+#summary(wine.fit3)
 #Calculating the MSE
 mean(wine.fit3$residuals^2)
 
